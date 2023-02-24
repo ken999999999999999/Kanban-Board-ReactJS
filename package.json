@@ -2,7 +2,7 @@
   "name": "kanban_board",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ken999999999999999.github.io/Kanban_Board-ReactJS",
+  "homepage": "https://ken999999999999999.github.io/Kanban-Board-ReactJS",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

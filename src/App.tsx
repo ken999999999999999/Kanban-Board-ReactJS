@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import { Layout, Typography } from "antd"
+import "antd/dist/reset.css"
+import { DndProvider } from "react-dnd"
+import { HTML5Backend } from "react-dnd-html5-backend"
+import TaskBoard from "./TaskBoard"
 
-function App() {
+const { Header, Content } = Layout
+
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout className="layout">
+      <Header style={{ padding: "12px 24px" }}>
+        <Typography.Title style={{ color: "white" }}>
+          Welcome to Kanban Board!
+        </Typography.Title>
+      </Header>
+      <Content style={{ padding: "24px", minHeight: "90vh" }}>
+        <DndProvider backend={HTML5Backend}>
+          <TaskBoard />
+        </DndProvider>
+      </Content>
+    </Layout>
+  )
 }
 
-export default App;
+export default App

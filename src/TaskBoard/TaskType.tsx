@@ -15,7 +15,7 @@ export interface ITask {
 
 export enum Status {
   Todo = "To do",
-  InProgress = "In progress",
+  InProgress = "In Progress",
   Completed = "Completed",
 }
 

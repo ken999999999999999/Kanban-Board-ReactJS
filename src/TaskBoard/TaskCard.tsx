@@ -38,11 +38,12 @@ export default ({ task }: ITaskCard): JSX.Element => {
     [task]
   )
   return (
-    <div ref={drag} style={{ cursor: "move", opacity }}>
+    <div ref={drag} style={{ opacity }}>
       <Card
         title={task.title}
         extra={<StatusTag status={task.status} />}
         hoverable
+        style={{ cursor: "move" }}
       >
         {task.description}
       </Card>
